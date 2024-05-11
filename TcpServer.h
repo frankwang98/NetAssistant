@@ -8,9 +8,9 @@ class TcpServer : public QTcpServer
     Q_OBJECT
 public:
     TcpServer(QObject *parent = 0);
-    QList<QTcpSocket*> tcpClientSocketList;
+    QList<QTcpSocket *> tcpClientSocketList;
 signals:
-    void updateTcpServer(char*, int, int);
+    void updateTcpServer(char *, int, int);
     void addClientLink(QString, int);
     void removeClientLink(QString, int);
 public slots:
@@ -18,6 +18,7 @@ public slots:
     void sendDataToClient(char *msg, int length, int socketDescriptor, int socketDescriptorEx);
     void acceptNewClient();
     void clientDataReceived();
+
 protected:
 };
 

@@ -19,8 +19,19 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    /**
+     * @brief set udp mode
+     */
     void setUdpGuiExt();
+
+    /**
+     * @brief set tcp server mode
+     */
     void setTcpSvrGuiExt();
+
+    /**
+     * @brief set tcp client mode
+     */
     void setTcpClientGuiExt();
 
     QList<int> tcpClientSocketDescriptorList;
@@ -30,16 +41,50 @@ signals:
     void sendDataToClient(char *msg, int length, int socketDescriptor, int socketDescriptorEx);
 
 private slots:
+    /**
+     * @brief language changed
+     */
     void on_actionEnglish_triggered();
 
+    /**
+     * @brief btn for connect net
+     * @param checked 
+     */
     void on_pBtnNetCnnt_clicked(bool checked);
+
+    /**
+     * @brief index of net type changed
+     * @param index 
+     */
     void on_cBoxNetType_currentIndexChanged(int index);
 
+    /**
+     * @brief btn for send data
+     */
     void on_pBtnSendData_clicked();
+
+    /**
+     * @brief clear data show
+     */
     void on_pBtnClearRcvDisp_clicked();
+
+    /**
+     * @brief modify udp port
+     * @param text 
+     */
     void on_lEditUdpPort_textChanged(QString text);
+
+    /**
+     * @brief modify udp ip
+     * @param text 
+     */
     void on_lEditUdpIP_textChanged(QString text);
+
+    /**
+     * @brief reset udp count
+     */
     void on_pBtnResetCnt_clicked();
+    
     char ConvertHexChar(char ch);
     char ConvertHexStr(QString hexSubStr);
 
