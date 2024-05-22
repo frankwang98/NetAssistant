@@ -1,5 +1,5 @@
 # NetAssistant
-A network debugging assistant based on Qt GUI.
+A network debugging assistant based on Qt GUI. 网络调试助手
 
 ## Features
 1. UDP；
@@ -12,7 +12,7 @@ A network debugging assistant based on Qt GUI.
 ## Build
 
 ### Windows
-passed.
+Qt 5.12 tested
 
 ### Linux
 ```
@@ -21,8 +21,11 @@ cd NetAssistant
 qmake
 make
 ```
+Qt 5.9.5 tested
 
 如果是Arm环境的话，需要交叉编译，可参考以下教程，有了环境后希望能搞一下，因为ARM下也需要网络调试助手哇：
 [1](https://doc.embedfire.com/linux/qt/embed/zh/latest/ebf_qt/install/install_cross.html)
 [2](https://yuanze.wang/posts/build-qt-embedded-linux/#%E5%AE%89%E8%A3%85qt)
 [3](https://blog.csdn.net/qq_43286311/article/details/118998717)
+
+Arm的还是不会编译，求大佬指教。
